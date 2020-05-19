@@ -1,5 +1,7 @@
 #dotfiles
+
 ##manually installed packages
+
 ```bash
 ~$ apt-mark showmanual | sort
 ```
