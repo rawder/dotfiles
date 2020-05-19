@@ -1,6 +1,6 @@
-#dotfiles
+# dotfiles
 
-##manually installed packages
+## manually installed packages
 
 ```bash
 ~$ apt-mark showmanual | sort
@@ -27,8 +27,6 @@ gcc
 git
 gnupg
 grep
-grub-efi-amd64
-grub-efi-amd64-signed
 gsettings-desktop-schemas
 gzip
 hostname
@@ -48,20 +46,13 @@ lvm2
 lxd-agent-loader
 make
 mako-notifier
-mc
-mdadm
 mesa-utils
 mpd
 multipath-tools
 ncurses-base
 ncurses-bin
 neofetch
-ntpsec-ntpdate
-open-iscsi
-openjdk-14-jre
 open-vm-tools
-overlayroot
-p7zip-full
 patch
 pavucontrol
 pollinate
@@ -70,18 +61,9 @@ python3-pymacaroons
 read-edid
 screen
 shim-signed
-snapd
-software-properties-common
-sosreport
 sway
 swayidle
 swaylock
-sysvinit-utils
-tmux
-ubuntu-minimal
-ubuntu-standard
-update-notifier-common
-vim
 waybar
 wireless-tools
 wofi
@@ -89,3 +71,20 @@ xcb
 xfsprogs
 xwayland
 
+on Ubuntu 20.04 use 
+```bash 
+sudo apt install -y crda, curl, diffutils, dirmngr, ethtool, \
+		fdisk, findutils, firefox, firefox-locale-ru, \
+		fonts-font-awesome, fonts-noto-hinted, \
+		fonts-noto-ui-core, fonts-noto-ui-extra, \
+		fonts-ubuntu-console, fwupd, gcc, git, gnupg, \
+		gsettings-desktop-schemas, gzip, hostname, htop, \
+		jq, kitty, libdebconfclient0, libpam0g-dev, \
+		libsodium23, libxcb-xkb-dev, linux-generic, \
+		lm-sensors, lvm2, lxd-agent-loader, make, \
+		mako-notifier, mesa-utils, mpd, multipath-tools, \
+		ncurses-base, ncurses-bin, neofetch, 
+		patch, pavucontrol, pollinate, python3-nacl, \
+		python3-pymacaroons, read-edid, screen, shim-signed, \
+		sway, swayidle, swaylock, waybar, wofi, xcb, xwayland
+```
