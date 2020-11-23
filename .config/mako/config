@@ -1,9 +1,12 @@
 font=FontAwesome 10
 background-color=#CCCCCC
-text-color=#ffffff
+text-color=#ff0000
 default-timeout=3000
+border-size=3
 border-radius=4
 layer=overlay
+anchor=bottom-right
+icons=1
 
 [app-name=AN2Linux]
 text-color=#00bfff
@@ -19,3 +22,4 @@ text-color=#777777
 
 [urgency=high]
 background-color=#ff0000
+

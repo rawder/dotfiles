@@ -18,15 +18,31 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 
+set $my_cursor default
+set $my_cursor_size 10 
+
+seat seat0 xcursor_theme $my_cursor $my_cursor_size
+exec_always {
+    gsettings set org.gnome.desktop.interface cursor-theme $my_cursor
+    gsettings set org.gnome.desktop.interface cursor-size $my_cursor_size
+}
+### Brightness control
+
+set $lcd_dev sysfs/backlight/intel_backlight
+
+exec_always {
+    sudo light -s $lcd_dev -N 10
+}
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wofi --insensitive --allow-images --show drun | xargs swaymsg exec --
+set $menu wofi --insensitive --allow-images --show drun | xargs swaymsg exec --
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/andrew/.wallpapers/ecopetit.cat-purple-tree-wallpaper-2143545.png fill
+output * bg ~/.wallpapers/default.jpg fill
 #
 # Example configuration:
 #
@@ -44,12 +60,12 @@ output * bg /home/andrew/.wallpapers/ecopetit.cat-purple-tree-wallpaper-2143545.
 #               resume 'swaymsg "output * dpms on"' \
 #          before-sleep 'swaylock -f -c 000000'
 #
-
+set $lock swaylock -f -c 000000
  exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
+          timeout 300 'exec $lock' \
           timeout 600 'swaymsg "output * dpms off"' \
                resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -c 000000'
+          before-sleep 'exec $lock'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -77,27 +93,36 @@ input * {
 bindsym Mod1+Shift_L		exec "pkill -SIGRTMIN+1 waybar &"
 bindsym Mod1+Shift_R		exec "pkill -SIGRTMIN+1 waybar &"
 
-### Window style
-gaps inner 4
+# keyboard extended keys
+bindsym XF86AudioRaiseVolume exec amixer set Master 10+
+bindsym XF86AudioLowerVolume exec amixer set Master 10-
+bindsym XF86AudioMute exec pulsemixer --toggle-mute
+
+bindsym XF86MonBrightnessUp exec sudo light -s sysfs/backlight/intel_backlight -A 10
+bindsym XF86MonBrightnessDown exec sudo light -s sysfs/backlight/intel_backlight -U 10
+
+# window style and placement
+gaps inner 2
 smart_gaps on
 default_border pixel
-
-### Notifications 
-
-exec mako
+for_window [title="AnyDesk"] floating enable
+for_window [app_id="firefox" title="Библиотека"] floating enable
+for_window [app_id="pavucontrol"] floating enable
+for_window [app_id="waybar" floating] {
+    move position cursor
+    move down 40px # adjust if some menus still don't fit
+}
 
 ### Key bindings
 #
 # Basics:
-#
-    # Start a terminal
-    bindsym $mod+Return exec $term
 
     # Kill focused window
     bindsym --to-code $mod+Shift+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+return exec $term
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -110,7 +135,19 @@ exec mako
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+set $mode_system Система: (e) Выход, (l) Заблокировать, (r) Перезагрузить, (s) Выключить
+    mode "$mode_system" {
+      bindsym e exec swaymsg exit
+      bindsym l exec $lock, mode "default"     
+      bindsym r exec --no-startup-id systemctl reboot, mode "default"
+      bindsym s exec --no-startup-id systemctl poweroff -i, mode "default"
+      #bindsym Shift+r exec --no-startup-id systemctl reboot --firmware-setup, mode "default"
+
+    # return to default mode
+      bindsym Return mode "default"
+      bindsym Escape mode "default"
+   }
+bindsym $mod+Shift+e mode "$mode_system"
 #
 # Moving around:
 #
@@ -242,6 +279,12 @@ bindsym $mod+r mode "resize"
 ##    }
 ##}
 
+# $mod+PrintScreen — скриншот произвольной области, PrintScreen — скриншот всего экрана.
+bindsym Print exec grim ~/Изображения/screen-"$(date +%s)".png
+bindsym $mod+Print exec grim -g "$(slurp)" ~/Изображения/screen-"$(date +%s)".png
+
+## Notifications
+exec mako
 
 exec waybar
 
