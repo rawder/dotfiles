@@ -1,7 +1,7 @@
 # dotfiles
 Some config files for Sony SVT13 laptop computer running sway environment
 
-## manually installed packages
+## Manually installed packages
 
 ```bash
 ~$ apt-mark showmanual | sort
