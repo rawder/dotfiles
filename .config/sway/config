@@ -121,7 +121,7 @@ for_window [app_id="waybar" floating] {
     bindsym --to-code $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym --to-code $mod+d exec $menu
     bindsym $mod+return exec $term
 
     # Drag floating windows by holding down $mod and left mouse button.
@@ -132,7 +132,7 @@ for_window [app_id="waybar" floating] {
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym --to-code $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
 set $mode_system Система: (e) Выход, (l) Заблокировать, (r) Перезагрузить, (s) Выключить
@@ -147,15 +147,15 @@ set $mode_system Система: (e) Выход, (l) Заблокировать,
       bindsym Return mode "default"
       bindsym Escape mode "default"
    }
-bindsym $mod+Shift+e mode "$mode_system"
+bindsym --to-code $mod+Shift+e mode "$mode_system"
 #
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+#    bindsym $mod+$left focus left
+#    bindsym $mod+$down focus down
+#    bindsym $mod+$up focus up
+#    bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -163,10 +163,10 @@ bindsym $mod+Shift+e mode "$mode_system"
     bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+#bindsym $mod+Shift+$left move left
+#    bindsym $mod+Shift+$down move down
+#    bindsym $mod+Shift+$up move up
+#   bindsym $mod+Shift+$right move right
     # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
@@ -205,16 +205,16 @@ bindsym $mod+Shift+e mode "$mode_system"
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    bindsym --to-code $mod+b splith
+    bindsym --to-code $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym --to-code $mod+s layout stacking
+    bindsym --to-code $mod+w layout tabbed
+    bindsym --to-code $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    bindsym --to-code $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
@@ -223,7 +223,7 @@ bindsym $mod+Shift+e mode "$mode_system"
     bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+    bindsym --to-code $mod+a focus parent
 #
 # Scratchpad:
 #
@@ -244,10 +244,10 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+# bindsym $left resize shrink width 10px
+#    bindsym $down resize grow height 10px
+#    bindsym $up resize shrink height 10px
+#    bindsym $right resize grow width 10px
 
     # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
@@ -259,7 +259,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym --to-code $mod+r mode "resize"
 
 #
 # Status Bar:
@@ -279,13 +279,15 @@ bindsym $mod+r mode "resize"
 ##    }
 ##}
 
-# $mod+PrintScreen — скриншот произвольной области, PrintScreen — скриншот всего экрана.
-bindsym Print exec grim ~/Изображения/screen-"$(date +%s)".png
-bindsym $mod+Print exec grim -g "$(slurp)" ~/Изображения/screen-"$(date +%s)".png
+exec waybar
+
+# $mod+PrintScreen — area screenshot, PrintScreen — fullscreen screenshot.
+set $picturedir $(xdg-user-dir PICTURES)
+
+bindsym Print exec grim $picturedir/screen-"$(date +%s)".png
+bindsym $mod+Print exec grim -g "$(slurp)" $picturedir/screen-"$(date +%s)".png
 
 ## Notifications
 exec mako
-
-exec waybar
 
 include /etc/sway/config.d/*
