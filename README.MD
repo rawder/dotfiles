@@ -29,4 +29,6 @@ Ubuntu 20.04 uses
                 sway swayidle swaylock waybar wofi xcb xwayland
 ```
 
-try in.sh to install
+Try in.sh to install. 
+![Looks something like](https://github.com/rawder/dotfiles/blob/master/screen.png){width="80%"}
+
