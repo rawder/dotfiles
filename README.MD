@@ -30,5 +30,4 @@ Ubuntu 20.04 uses
 ```
 
 Try in.sh to install. 
-![Looks something like](https://github.com/rawder/dotfiles/blob/master/screen.png){width="80%"}
-
+![Looks something like](https://github.com/rawder/dotfiles/blob/master/screen.png)
