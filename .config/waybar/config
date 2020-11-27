@@ -1,4 +1,10 @@
 {
+   //
+   // Style based on carlosdss22 configuration. 
+   //
+   // See https://github.com/Alexays/Waybar/wiki/Examples for details
+   //
+   //
     "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     //"height": 30, // Waybar height (to be removed for auto height)
