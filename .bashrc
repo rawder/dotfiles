@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-color|*-256color|xterm-kitty) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -76,8 +76,8 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -86,15 +86,20 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
+alias lh='ls -lahF'
 alias l='ls -CF'
-alias icat="kitty +kitten icat"
-alias vim='vim -u ~/.local/opt/SpaceVim/vimrc'
 
+alias mpv='mpv --gpu-context=wayland --hwdec=vaapi --hwdec-codecs=all'
+alias icat='kitty +kitten icat'
+alias ssh='kitty +kitten ssh'
+alias vim='nvim'
+alias yay='yay --noconfirm'
+alias scrcpy='scrcpy --no-audio'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -108,6 +113,21 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+export LANGUAGE=ru_RU
+export LC_TIME=ru_RU.UTF-8
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+export XDG_DATA_HOME=~/.local
+export XDG_CONFIG_HOME=~/.config
+export XDG_STATE_HOME=~/.cache
+export CHROMIUM_USER_FLAGS='--gtk-version=4 --enable-features=UseOzonePlatform --ozone-platform=wayland'
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
+
+# set PATH so it includes user's private bin if it exists
+#if [ -d "$HOME/.local/bin" ] ; then
+    export PATH="$HOME/.local/bin:$PATH"
+#fi
+
+#
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).

@@ -1,33 +1,25 @@
-# dotfiles
-Some config files for Sony SVT13 laptop computer running sway environment
+# Installing dotfiles
+Some config files for my laptop computer running hyprland environment
 
-## Manually installed packages
+1. Clone the repository
+
+2. Use Arch packages previously installed
 
 ```bash
-~$ apt-mark showmanual | sort
-```
-crda\
-curl\
-....\
-xfsprogs\
-xwayland
-
-Ubuntu 20.04 uses   
-```bash 
-~$ sudo apt install -y alsa-utils rda curl diffutils dirmngr ethtool \
-                findutils firefox firefox-locale-ru \
-                fonts-font-awesome fonts-noto \
-                fonts-ubuntu-console fontconfig git gnupg \
-                gsettings-desktop-schemas gzip hostname htop \
-                jq kitty libdebconfclient0 libpam0g-dev \
-                libsodium23 libxcb-xkb-dev \
-                lm-sensors lvm2 lxd-agent-loader make \
-                mako-notifier mesa-utils mpd multipath-tools \
-                ncurses-base ncurses-bin neofetch \
-                pavucontrol pollinate python3-nacl \
-                python3-pymacaroons read-edid shim-signed \
-                sway swayidle swaylock waybar wofi xcb xwayland
+~$ pacman -Qe | awk '{print $1}' | sort >  packages.txt
 ```
 
-Try in.sh to install. 
+'amd-ucode',
+'auto-cpufreq',
+'base',
+'base-devel' and so on
+
+Install [yay](https://github.com/Jguer/yay) and
+
+```bash
+~$ yay -S --needed --noconfirm - < packages.txt
+```
+
+3. Copy dotfiles to $HOME 
+
 ![Looks something like](https://github.com/rawder/dotfiles/blob/master/screen.png)
