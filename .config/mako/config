@@ -1,0 +1,25 @@
+font=FontAwesome 10
+background-color=#CCCCCC
+text-color=#ff0000
+default-timeout=3000
+border-size=3
+border-radius=4
+layer=overlay
+anchor=bottom-right
+icons=1
+
+[app-name=AN2Linux]
+text-color=#00bfff
+border-color=#00bfff
+
+[app-name=fish]
+ignore-timeout=1
+default-timeout=0
+
+[hidden]
+format=(and %h more)
+text-color=#777777
+
+[urgency=high]
+background-color=#ff0000
+
