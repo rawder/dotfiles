@@ -1,0 +1,38 @@
+[Added Associations]
+application/vnd.tcpdump.pcap=libreoffice-writer.desktop;
+application/x-shellscript=kitty-open.desktop;vim.desktop;
+text/plain=libreoffice-writer.desktop;vim.desktop;org.gnome.TextEditor.desktop;
+image/jpeg=shotwell-viewer.desktop;org.gnome.Shotwell-Viewer.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-PX7ZU1.desktop;userapp-Telegram Desktop-CI96V1.desktop;
+video/mp4=vlc.desktop;mpv.desktop;
+image/png=shotwell-viewer.desktop;org.gnome.Shotwell-Viewer.desktop;
+application/pdf=org.gnome.Evince.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+text/html=firefox.desktop;
+application/x-extension-htm=firefox.desktop;
+application/x-extension-html=firefox.desktop;
+application/x-extension-shtml=firefox.desktop;
+application/xhtml+xml=firefox.desktop;
+application/x-extension-xhtml=firefox.desktop;
+application/x-extension-xht=firefox.desktop;
+application/vnd.openstreetmap.data+xml=libreoffice-writer.desktop;
+
+[Default Applications]
+image/jpeg=org.gnome.Shotwell-Viewer.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-CI96V1.desktop
+video/mp4=mpv.desktop
+text/plain=org.gnome.TextEditor.desktop
+image/png=org.gnome.Shotwell-Viewer.desktop
+application/pdf=org.gnome.Evince.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+text/html=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop

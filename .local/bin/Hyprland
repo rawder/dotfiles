@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+
+/usr/bin/Hyprland 2>&1 > /tmp/.Hyprland.log

@@ -1,0 +1,262 @@
+{
+    //
+    // Style based on carlosdss22 configuration.
+    //
+    // See https://github.com/Alexays/Waybar/wiki/Examples for details
+    //
+    // Waybar at top layer
+    "layer": "top",
+    // Waybar position (top|bottom|left|right)  
+    "position": "top",
+    // Waybar height and width (to be removed for auto height)
+    "height": 20,
+    // "width": 1280, 
+    // Order of the modules
+    "modules-left": [
+        "hyprland/workspaces",
+	"hyprland/window",
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "hyprland/language",
+        "tray",
+        "backlight",
+        "pulseaudio",
+        "network",
+        "bluetooth",
+        "temperature",
+        "battery",
+        "clock"
+    ],
+
+    // Modules configuration
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": " ",
+            "2": "",
+            "3": " ",
+            "4": " ",
+            "5": " ",
+            "urgent": " ",
+            "focused": " ",
+            "default": " "
+        },
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "En",
+        "format-ru": "Ru",
+    },
+
+    "hyprland/window": {
+        "max-length": 200,
+        "separate-outputs": true,
+        "format": "{title}",
+        "rewrite": {
+            "(.*) - Mozilla Firefox": "🌎 $1",
+            "vim (.*)": "Vim - $1",
+            "(.*) - kitty": " [$1]"
+        },
+        "icon": true,
+        "icon-size": 18
+    },
+    
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    
+    "tray": {
+        "spacing": 10,
+	"icon-size": 16
+    },
+    
+    "clock": {
+            "format": "{:%H:%M}",
+            "format-alt": "{:%a, %d %B %R}",
+            "tooltip-format": "<tt>{calendar}</tt>",
+            "calendar": {
+                                "mode"          : "year",
+                                "mode-mon-col"  : 3,
+                                "weeks-pos"     : "",
+                                "on-scroll"     : 1,
+                                "on-click-right": "mode",
+                                "format": {
+                                                              "months":     "<span color='#ffead3'>{}</span>",
+                                                              "days":       "<span color='#d8dee9'>{}</span>",
+                                                              "weeks":      "<span color='#99ffdd'>{}</span>",
+                                                              "weekdays":   "<span color='#ffcc66'>{}</span>",
+                                                              "today":      "<span color='#222222' bgcolor='#d8dee9'><b>{}</b></span>"
+                                                              }
+                                },
+            "actions":  {
+                                "on-click-right": "mode",
+                                "on-click-forward": "tz_up",
+                                "on-click-backward": "tz_down",
+                                "on-scroll-up": "shift_up",
+                                "on-scroll-down": "shift_down"
+                                }
+    },
+
+    "custom/power": {
+        "format": "",
+        "on-click": "poweroff",
+        "tooltip": false
+    },
+    
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false,
+    },
+    
+    "memory": {
+        "format": "{}% ",
+    },
+    
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "tooltip": false,
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+    },
+    
+    "backlight": {
+        "device": "amdgpu_bl0",
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            " ⚪",
+	    " ⬤ ",
+        ],
+    },
+    
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-good": "{capacity}% {icon}", 
+        "format-full": "",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+    },
+    
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    
+    "network": {
+        "format-wifi": " ",
+        "format-ethernet": " ",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format-wifi": "{essid}: {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname}: {bandwidthTotalBytes}"
+    },
+    
+    "bluetooth": {
+        "format": "",
+        "format-connected": "  ",
+        "tooltip-format": "{controller_alias}\t{controller_address} ({num_connections} connected)",
+        "tooltip-format-connected": "{controller_alias} ({controller_address})\t{num_connections} connected:\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias} ({device_address}): {device_battery_percentage}%",
+    },
+    
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": "   ",
+        "on-click": "pavucontrol",
+        "format-icons": [
+            "  ",
+            "  ",
+            "   "
+        ]
+    },
+    
+    "pulseaudio": {
+        "format": "{volume}% {icon}  {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "  {icon} {format_source}",
+        "format-muted": "   {format_source}",
+        "format-source": " {volume}% ",
+        "format-source-muted": "  ",
+        "format-icons": {
+            "headphones": " ",
+            "handsfree": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [
+                "",
+                "",
+                " "
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" 
+    }
+}
