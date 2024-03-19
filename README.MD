@@ -20,6 +20,8 @@ Install [yay](https://github.com/Jguer/yay) and
 ~$ yay -S --needed --noconfirm - < packages.txt
 ```
 
-3. Copy dotfiles to $HOME 
+3. Copy dotfiles to $HOME
 
-![Looks something like](https://github.com/rawder/dotfiles/blob/master/screen.png)
+4. Looks Nordic:
+
+![Looks something like this](https://github.com/rawder/dotfiles/blob/master/screen.png)
