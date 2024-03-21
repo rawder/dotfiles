@@ -23,6 +23,10 @@ Some config files for my laptop computer running hyprland environment
 
 3. Copy dotfiles to $HOME
 
-4. Looks Nordic with Nordic theme, Papirus-Dark icons, Volantes or ArcStarry Cursors from [Gnome-look](https://www.gnome-look.org/)
+4. Install awesome
+   - Telegram-desktop [Nordic theme](https://t.me/addtheme/nordplus)
+   - qBittorent [Nord theme](https://github.com/aadhithbala/Dotfiles/raw/main/qBittorrent-themes/nord.qbtheme)
 
-![Looks something like this](https://github.com/rawder/dotfiles/blob/master/screen.png)
+5. Looks Nordic with Nordic theme, Papirus-Dark icons, Volantes or ArcStarry Cursors from [Gnome-look](https://www.gnome-look.org/)
+
+    ![Looks something like this](https://github.com/rawder/dotfiles/blob/master/screen.png)
