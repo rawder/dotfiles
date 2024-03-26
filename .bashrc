@@ -94,12 +94,11 @@ alias la='ls -A'
 alias lh='ls -lahF'
 alias l='ls -CF'
 
-alias mpv='mpv --gpu-context=wayland --hwdec=vaapi --hwdec-codecs=all'
 alias icat='kitty +kitten icat'
 alias ssh='kitty +kitten ssh'
 alias vim='nvim'
 alias yay='yay --noconfirm'
-alias scrcpy='scrcpy --no-audio'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
