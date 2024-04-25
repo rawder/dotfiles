@@ -1,6 +1,6 @@
 # Installing dotfiles
 
-Some config files for my laptop computer running hyprland environment
+Some config files for my laptop computer running hyprland environment with 1.25 screen scale
 
 1. Clone the repository
 
@@ -30,3 +30,5 @@ Some config files for my laptop computer running hyprland environment
 5. Looks Nordic with Nordic theme, Papirus-Dark icons, Volantes or ArcStarry Cursors from [Gnome-look](https://www.gnome-look.org/)
 
     ![Looks something like this](https://github.com/rawder/dotfiles/blob/master/screen.png)
+
+6. Edit your ```.config/hypr/hyprland.conf``` according to your screen scale and resolution
