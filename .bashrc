@@ -118,7 +118,6 @@ export XDG_RUNTIME_DIR=/run/user/$(id -u)
 export XDG_DATA_HOME=~/.local
 export XDG_CONFIG_HOME=~/.config
 export XDG_STATE_HOME=~/.cache
-export CHROMIUM_USER_FLAGS='--gtk-version=4 --enable-features=UseOzonePlatform --ozone-platform=wayland'
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 
 # set PATH so it includes user's private bin if it exists
