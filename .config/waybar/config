@@ -107,8 +107,9 @@
     },
     
     "clock": {
-            "format": "{:%H:%M}",
-            "format-alt": "{:%a, %d %B %R}",
+            "locale": "ru_RU.UTF-8",
+	    "format": "{:%H:%M}",
+            "format-alt": "{:L%a, %d %B %R}",
             "tooltip-format": "<tt>{calendar}</tt>",
             "calendar": {
                                 "mode"          : "year",
