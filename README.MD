@@ -7,7 +7,7 @@ Some config files for my laptop computer running hyprland environment with 1.25 
 2. Use Arch packages previously installed and saved to 'packages.txt'
 
     ```bash
-    ~$ pacman -Qe | awk '{print $1}' | sort >  packages.txt
+    ~$ yay -Qe | awk '{print $1}' | sort >  packages.txt
     ```
 
     'amd-ucode',
