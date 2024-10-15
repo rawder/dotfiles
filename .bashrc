@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=2000
+HISTFILESIZE=10000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -90,6 +90,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 
 # some more ls aliases
 alias ll='ls -alF'
+alias lld='ls -alFSt'
 alias la='ls -A'
 alias lh='ls -lahF'
 alias l='ls -CF'
@@ -119,6 +120,7 @@ export XDG_DATA_HOME=~/.local
 export XDG_CONFIG_HOME=~/.config
 export XDG_STATE_HOME=~/.cache
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # set PATH so it includes user's private bin if it exists
 #if [ -d "$HOME/.local/bin" ] ; then

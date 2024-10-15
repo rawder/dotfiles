@@ -2,7 +2,14 @@
 
 Some config files for my laptop computer running Hyprland with 1.2 screen scale
 
-1. Install [yay](https://github.com/Jguer/yay) and clone the repository
+1. Install [yay](https://github.com/Jguer/yay) 
+   ```
+   ~$ sudo pacman -S --needed git base-devel
+   ~$ git clone https://aur.archlinux.org/yay.git
+   ~$ cd yay
+   ~$ makepkg -si
+   ```
+   and clone the repository
 
 2. Use Arch packages previously installed and saved to 'packages.txt' with
 
