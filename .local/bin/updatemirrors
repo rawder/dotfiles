@@ -1,0 +1,15 @@
+#!/bin/bash
+# vim: filetype=sh
+
+if [ `whoami` != 'root' ]; then
+    echo "Root privileges are required for this operation."
+    exit
+fi
+
+# Get 50 Arch Linux Mirrors
+reflector -l 50 -p https --save /etc/pacman.d/mirrorlist
+# Save a local copy
+cp -f /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+# Finding the Fastest Arch Linux Mirrors
+rate-mirrors --allow-root --protocol https arch | grep -v '^#' | sudo tee /etc/pacman.d/mirrorlist
+

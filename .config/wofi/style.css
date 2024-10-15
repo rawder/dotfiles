@@ -10,7 +10,7 @@
 #input {
   margin: 15px;
   padding: 5px 10px;
-  width: 180px;
+  min-width: 180px;
   border: 1px solid;
   color: #eeeeee;
   background-color: #3b4252;
