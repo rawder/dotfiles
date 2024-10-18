@@ -137,6 +137,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# move cmdline to bottom
+echo -ne "\E[${LINES};0H"
+
+# set cmdline format
 export OS_ICON=
 export PS1="\[\033[1;30m\]\[\033[42m\] $OS_ICON \u@\h \[\033[0m\]\[\033[0;32m\]\[\033[44m\]\[\033[0;34m\]\[\033[44m\]\[\033[1;30m\]\[\033[44m\] \w \[\033[0m\]\[\033[0;34m\] \[\033[1;36m\]\$ \[\033[0m\]" 
 
