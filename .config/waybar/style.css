@@ -15,8 +15,9 @@
     }
 }
 
+
 window#waybar {
-    margin: 1px 2px;
+    margin: 5px;
     background-color: rgba(43, 48, 59, 0.9);
     color: #e5e9f0;
     transition-property: background-color;
@@ -33,11 +34,12 @@ window#waybar.termite {
 
 #workspaces {
     margin: 0 7px 1px 2px;
+    padding: 2px;
 }
 
 #workspaces button {
     margin-right: 1px;
-    padding: 0 8px;
+    padding: 0 7px;
     background-color: #4c566a;
     color: #ffffff;
     border-radius: 3px;
@@ -79,11 +81,8 @@ window#waybar.termite {
 #idle_inhibitor,
 #language,
 #mpd {
-    padding: 0 8px;
-    margin: 0;
-    margin-right: 1px;
-
-    margin: 0 1px 1px 0;
+    padding: 3px 8px;
+    margin: 2px 1px 2px 0;
     border-radius: 3px;
 }
 
