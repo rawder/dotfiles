@@ -5,7 +5,7 @@
     "Widgets": [
         {
             "SplitterVertical": {
-                "State": "AAAA/wAAAAEAAAAEAAAAIwAAALkAAAKRAAAAMQD/////AQAAAAIA",
+                "State": "AAAA/wAAAAEAAAAEAAAAIgAAASUAAAIEAAAALwD/////AQAAAAIA",
                 "Widgets": [
                     {
                         "SplitterHorizontal": {
@@ -65,7 +65,7 @@
                                         "ID": "955f29805de446d7a9b6195a94bfd817",
                                         "Index": 0,
                                         "ShowSummary": true,
-                                        "State": "AAAAJXjaY2BgYASidQxgGgwY7T9AGVABBgAoLgHj"
+                                        "State": "AAAAJXjaY2BgYASiJgYwDQaM9h+gDKgAAwAjBgG3"
                                     }
                                 },
                                 {
@@ -78,7 +78,7 @@
                                         "ID": "4fee1a754b3e47ff86f4c711fbf0f0eb",
                                         "Index": 1,
                                         "ShowSummary": true,
-                                        "State": "AAAAJXjaY2BgYASidQxgGgwY7T9AGVABBgAoLgHj"
+                                        "State": "AAAAJXjaY2BgYASiRgYwDQaM9h+gDKgAAwAi6AG2"
                                     }
                                 },
                                 {
@@ -91,7 +91,7 @@
                                         "ID": "3b20c1db282d4bfe9a95c776e6723608",
                                         "Index": 2,
                                         "ShowSummary": true,
-                                        "State": "AAAAJXjaY2BgYASidQxgGgwY7T9AGVABBgAoLgHj"
+                                        "State": "AAAAJXjaY2BgYASiJgYwDQaM9h+gDKgAAwAjBgG3"
                                     }
                                 },
                                 {
@@ -104,7 +104,7 @@
                                         "ID": "34777508a4ae4ec5939620f235e8ec1a",
                                         "Index": 3,
                                         "ShowSummary": true,
-                                        "State": "AAAAJXjaY2BgYASidQxgGgwY7T9AGVABBgAoLgHj"
+                                        "State": "AAAAJXjaY2BgYASiRgYwDQaM9h+gDKgAAwAi6AG2"
                                     }
                                 }
                             ]
@@ -112,12 +112,12 @@
                     },
                     {
                         "SplitterHorizontal": {
-                            "State": "AAAA/wAAAAEAAAADAAACpQAAAnYAAAGvAP////8BAAAAAQA=",
+                            "State": "AAAA/wAAAAEAAAADAAACmgAAAfwAAAI0AP////8BAAAAAQA=",
                             "Widgets": [
                                 {
                                     "Playlist": {
-                                        "Columns": "8:132|3|0:2|1|7:2",
-                                        "HeaderState": "AAAAZXjaY2BgYGVgYNBgYGAEUgxmUNqZASIOAiABJiBmBmIWkLj9uh2Br1vldtjfAFNB9luqHrqvE6mG83fOBIFZYJP+AwEAopgZVw==",
+                                        "Columns": "8:132|1|7:2",
+                                        "HeaderState": "AAAARXjaY2BgYGZgYHBiYGBcDKTzGCB8EGAEYiYQ335P4XGZwuOy9s9a9i7Uz/CxP75F9S1ntTNIAcN/IAAATEoQfw==",
                                         "ID": "bff24cdf980c4a21af9db793b708a557",
                                         "Preset": 0,
                                         "SingleMode": false
@@ -133,7 +133,7 @@
                                 {
                                     "SelectionInfo": {
                                         "Options": 61,
-                                        "State": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa0AAAACAAAAAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAzwAAAAEAAAAAAAAA3gAAAAEAAAAAAAAD6AAAAABkAAAAAA=="
+                                        "State": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfgAAAACAAAAAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAzwAAAAEAAAAAAAABKQAAAAEAAAAAAAAD6AAAAABkAAAAAA=="
                                     }
                                 }
                             ]

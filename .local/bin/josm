@@ -2,5 +2,8 @@
 
 cd $(xdg-user-dir DOWNLOAD)
 wget -N -bcq https://josm.openstreetmap.de/josm-tested.jar
-java -jar -Xmx4G -Xms4G -Dsun.java2d.uiScale.enabled josm-tested.jar > /dev/null 2>&1
+
+#export _JAVA_AWT_WM_NONREPARENTING=1
+
+java -jar -Xmx2G -Xms2G -Dawt.useSystemAAFontSettings=lcd -Dsun.java2d.uiScale.enabled josm-tested.jar > /dev/null 2>&1
 

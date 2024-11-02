@@ -1,8 +1,10 @@
 #!/bin/bash
 # vim: filetype=sh
 
+echo "Usage: sudo "$0
+
 if [ `whoami` != 'root' ]; then
-    echo "Root privileges are required for this operation."
+    echo "Root privileges are required. Try sudo $0"
     exit
 fi
 

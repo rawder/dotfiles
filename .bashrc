@@ -99,6 +99,7 @@ alias icat='kitty +kitten icat'
 alias ssh='kitty +kitten ssh'
 alias vim='nvim'
 alias yay='yay --noconfirm'
+alias wshowkeys='wshowkeys -b#CCCCCC22 -F "monospace 48" -a bottom -a left -m 80'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -119,8 +120,6 @@ export XDG_RUNTIME_DIR=/run/user/$(id -u)
 export XDG_DATA_HOME=~/.local
 export XDG_CONFIG_HOME=~/.config
 export XDG_STATE_HOME=~/.cache
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
-export _JAVA_AWT_WM_NONREPARENTING=1
 
 # set PATH so it includes user's private bin if it exists
 #if [ -d "$HOME/.local/bin" ] ; then
@@ -139,6 +138,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# move cmdline to bottom
+echo -ne "\E[${LINES};0H"
+
+# set cmdline format
 export OS_ICON=
 export PS1="\[\033[1;30m\]\[\033[42m\] $OS_ICON \u@\h \[\033[0m\]\[\033[0;32m\]\[\033[44m\]\[\033[0;34m\]\[\033[44m\]\[\033[1;30m\]\[\033[44m\] \w \[\033[0m\]\[\033[0;34m\] \[\033[1;36m\]\$ \[\033[0m\]" 
 
