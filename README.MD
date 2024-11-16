@@ -29,7 +29,7 @@ Some config files for my laptop computer running Hyprland with 1.2 screen scale
 
 3. Copy dotfiles to $HOME
 
-4. Install awesome
+4. Install application themes
    - Telegram-desktop [Nordic theme](https://t.me/addtheme/nordplus)
    - qBittorent [Nord theme](https://github.com/aadhithbala/Dotfiles/raw/main/qBittorrent-themes/nord.qbtheme)
 
@@ -37,6 +37,6 @@ Some config files for my laptop computer running Hyprland with 1.2 screen scale
 
     ![Looks something like this](https://github.com/rawder/dotfiles/blob/master/screen.png)
 
-6. Edit your ```.config/hypr/hyprland.conf``` according to your screen scale and resolution
+6. Edit your ```.config/hypr/hyprland.conf``` to adjust your screen scale and resolution
 
 Enjoy!

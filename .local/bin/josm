@@ -1,9 +1,0 @@
-#!/usr/bin/env sh
-
-cd $(xdg-user-dir DOWNLOAD)
-wget -N -bcq https://josm.openstreetmap.de/josm-tested.jar
-
-#export _JAVA_AWT_WM_NONREPARENTING=1
-
-java -jar -Xmx2G -Xms2G -Dawt.useSystemAAFontSettings=lcd -Dsun.java2d.uiScale.enabled josm-tested.jar > /dev/null 2>&1
-
