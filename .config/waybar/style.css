@@ -15,10 +15,9 @@
     }
 }
 
-
 window#waybar {
     margin: 5px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     background-color: rgba(43, 48, 59, 0.9);
     color: #e5e9f0;
     transition-property: background-color;
@@ -34,7 +33,7 @@ window#waybar.termite {
 }
 
 #workspaces {
-    margin: 0 7px 1px 2px;
+    margin: 0 7px 0 2px;
     padding: 2px;
 }
 

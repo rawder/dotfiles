@@ -1,14 +1,8 @@
 {
     "label" : "lock",
-    "action" : "swaylock -f -c 000000",
+    "action" : "hyprlock",
     "text" : "Lock",
     "keybind" : "l"
-}
-{
-    "label" : "hibernate",
-    "action" : "systemctl hibernate",
-    "text" : "Hibernate",
-    "keybind" : "h"
 }
 {
     "label" : "logout",
