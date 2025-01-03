@@ -8,4 +8,6 @@ lines=10
 columns=1
 prompt=Type to filter
 no_actions=true
+normal_window=true
+layer=overlay
 
