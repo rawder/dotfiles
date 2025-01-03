@@ -3,7 +3,7 @@
 }
 
 window {
-  background-color: rgba(46, 52, 64, 0.5); 
+  background-color: rgba(46, 52, 64, 0.7); 
 }
 
 button {
@@ -13,16 +13,23 @@ button {
   border-radius: 10px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 25%;
+  background-size: 30%;
   color: #5e81ac;
 }
-/*
-button:focus, button:active, button:hover {
-  background-color: #4c566a;
-  color: #81a1c1;
+
+button:focus,
+button:active,
+button:hover {
+ /* background-color: #4c566a;
+  color: #81a1c1; */
   outline-style: none;
 }
-*/
+
+button:hover {
+  color: #ffffff;
+  background-color: #517175;
+}
+
 
 #lock {
     background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
