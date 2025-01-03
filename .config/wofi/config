@@ -3,8 +3,9 @@
 #mode=drun
 allow_images=true
 image_size=32
-width=400
+width=450
 lines=10
 columns=1
 prompt=Type to filter
+no_actions=true
 
