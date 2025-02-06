@@ -57,7 +57,12 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    # move cmdline to bottom
+    echo -ne "\E[${LINES};0H"
+    # set cmdline format
+    export OS_ICON=
+    export PS1="\[\033[1;30m\]\[\033[42m\] $OS_ICON \u@\h \[\033[0m\]\[\033[0;32m\]\[\033[44m\]\[\033[0;34m\]\[\033[44m\]\[\033[1;30m\]\[\033[44m\] \w \[\033[0m\]\[\033[0;34m\] \[\033[1;36m\]\$ \[\033[0m\]" 
+
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -123,7 +128,7 @@ export XDG_STATE_HOME=~/.cache
 
 # set PATH so it includes user's private bin if it exists
 #if [ -d "$HOME/.local/bin" ] ; then
-    export PATH="$HOME/.local/bin:$PATH"
+#    export PATH="$HOME/.local/bin:$PATH"
 #fi
 
 #
@@ -137,13 +142,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# move cmdline to bottom
-echo -ne "\E[${LINES};0H"
-
-# set cmdline format
-export OS_ICON=
-export PS1="\[\033[1;30m\]\[\033[42m\] $OS_ICON \u@\h \[\033[0m\]\[\033[0;32m\]\[\033[44m\]\[\033[0;34m\]\[\033[44m\]\[\033[1;30m\]\[\033[44m\] \w \[\033[0m\]\[\033[0;34m\] \[\033[1;36m\]\$ \[\033[0m\]" 
 
 source <(kitty + complete setup bash)
 
