@@ -173,7 +173,14 @@
 	    " ⬤ ",
         ],
     },
-    
+
+    "backlight/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal",
+        "device": "amdgpu_bl1"
+    },
+
     "battery": {
         "states": {
             "good": 95,

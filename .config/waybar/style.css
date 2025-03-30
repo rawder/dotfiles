@@ -53,7 +53,7 @@ window#waybar.termite {
 }
 
 #workspaces button.focused {
-    background-color: #64727d;
+    background-color: #5e81ac;
     border-bottom: 2px solid #ffffff;
 }
 
@@ -131,11 +131,13 @@ label:focus {
     background-color: #f53c3c;
 }
 
-#network,
-#bluetooth {
-    /* margin-left: -5px;
-    padding-left: 8px; */
+#network {
     background-color: #31668A;
+}
+
+#bluetooth {
+    padding: 3px 1px;
+    background-color: #28428d;
 }
 
 #bluetooth.disabled {
