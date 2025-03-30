@@ -54,6 +54,7 @@
         "format": "{}",
         "format-en": "En",
         "format-ru": "Ru",
+	"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
     },
 
     "hyprland/window": {
