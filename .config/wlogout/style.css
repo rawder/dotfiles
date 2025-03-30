@@ -1,38 +1,51 @@
 * {
-  background-image: none;
+    background-image: none;
+    transition: 20ms;
+    box-shadow: none;
 }
 
 window {
-  background-color: rgba(46, 52, 64, 0.7); 
+    background-color: rgba(46, 52, 64, 0.7);
+    font-size: 16px;
 }
 
 button {
-  background-color: #2e3440;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 10px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 30%;
-  color: #5e81ac;
+    margin: 0;
+    padding: 0;
+    background-color: #2e3440;
+    border-style: none;
+    border-width: 1px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    color: #5e81ac;
+    border-radius: 0px;
+    outline-style: none;
 }
 
 button:focus,
 button:active,
 button:hover {
  /* background-color: #4c566a;
-  color: #81a1c1; */
-  outline-style: none;
+    color: #81a1c1; */
+    outline-style: none;
 }
 
 button:hover {
-  color: #ffffff;
-  background-color: #517175;
+    color: rgba(0, 0, 0, 0);
+    background-color: #517175;
+    background-size: 37%;
+    border-radius: 10px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
 }
-
 
 #lock {
     background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+    border-radius: 10px 0px 0px 10px;
+}
+#lock:hover {
+    border-radius: 10px;
 }
 
 #logout {
@@ -53,5 +66,10 @@ button:hover {
 
 #reboot {
     background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+    border-radius: 0px 10px 10px 0px;
+}
+
+#reboot:hover {
+    border-radius: 10px;
 }
 
