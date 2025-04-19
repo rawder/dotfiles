@@ -19,6 +19,7 @@
     ],
     "modules-center": [],
     "modules-right": [
+    	"idle_inhibitor",
         "hyprland/language",
         "tray",
         "backlight",
@@ -101,7 +102,7 @@
         "format": "{icon}",
         "format-icons": {
             "activated": "",
-            "deactivated": ""
+    //        "deactivated": ""
         }
     },
     
