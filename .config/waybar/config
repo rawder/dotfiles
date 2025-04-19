@@ -36,7 +36,7 @@
         "format": "{name}: {icon}",
         "format-icons": {
             "1": " ",
-            "2": "",
+            "2": "",
             "3": " ",
             "4": "",
             "5": "",
@@ -171,7 +171,7 @@
         "format": "{percent}% {icon}",
         "format-icons": [
             " ",
-	    " ",
+	    " ",
         ],
     },
 
@@ -219,7 +219,7 @@
     
     "bluetooth": {
         "format": "",
-        "format-connected": "  ",
+        "format-connected": "  ",
         "tooltip-format": "{controller_alias}\t{controller_address} ({num_connections} connected)",
         "tooltip-format-connected": "{controller_alias} ({controller_address})\t{num_connections} connected:\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",

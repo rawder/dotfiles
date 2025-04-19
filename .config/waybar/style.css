@@ -3,6 +3,7 @@
     border-radius: 0;
     font-family: Font Awesome;
     font-size: 12px;
+    color: #d8dee9;
 }
 
 @keyframes background-blink {
@@ -41,7 +42,6 @@ window#waybar.termite {
     margin-right: 1px;
     padding: 0 7px;
     background-color: #4c566a;
-    color: #ffffff;
     border-radius: 3px;
 }
 
@@ -137,7 +137,7 @@ label:focus {
 
 #bluetooth {
     padding: 3px 1px;
-    background-color: #28428d;
+    background-color: #14477d;
 }
 
 #bluetooth.disabled {
