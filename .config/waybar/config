@@ -20,14 +20,14 @@
     "modules-center": [],
     "modules-right": [
     	"idle_inhibitor",
-        "hyprland/language",
         "tray",
+	"network",
+	"bluetooth",
         "backlight",
-        "pulseaudio",
-        "network",
-        "bluetooth",
-        "temperature",
+	"temperature",
+	"pulseaudio",
         "battery",
+	"hyprland/language",
         "clock"
     ],
 
@@ -155,13 +155,15 @@
     },
     
     "temperature": {
-        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
-        "critical-threshold": 80,
+        "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+	"warning-threshold": 50,
+        "critical-threshold": 55,
+	"format": "",
+        "format-warning": "{temperatureC}°C {icon}",
         "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
         "tooltip": false,
         "format-icons": [
-            "",
+            "",
             "",
             ""
         ],
@@ -169,10 +171,11 @@
     
     "backlight": {
         "device": "amdgpu_bl0",
+	"tooltip": false,
         "format": "{percent}% {icon}",
         "format-icons": [
             " ",
-	    " ",
+	    " ",
         ],
     },
 

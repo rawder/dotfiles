@@ -112,7 +112,7 @@ label:focus {
 }
 
 #language {
-    background-color: #14477d;
+    background-color: #4e6a90;
 }
 
 #cpu {
@@ -171,9 +171,12 @@ label:focus {
 }
 
 #temperature {
-    background-color: #B68D40;
+    background-color: #a3be8c;
 }
 
+#temperature.warning {
+    background-color: #b68d40;
+}
 #temperature.critical {
     background-color: #eb4d4b;
 }
