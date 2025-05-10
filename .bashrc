@@ -103,7 +103,7 @@ alias l='ls -CF'
 alias icat='kitty +kitten icat'
 alias ssh='kitty +kitten ssh'
 alias vim='nvim'
-alias yay='yay --noconfirm'
+alias yay='yay --noconfirm $@ && yes | sudo pacman -Sccq'
 alias wshowkeys='wshowkeys -b#CCCCCC22 -F "monospace 48" -a bottom -a left -m 80'
 
 # Add an "alert" alias for long running commands.  Use like so:

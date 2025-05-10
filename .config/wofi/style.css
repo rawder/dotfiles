@@ -1,11 +1,11 @@
 /*@import "~/.cache/wal/colors.css";*/
 #window {
   font-family: 'Roboto', serif;
-  font-size: 1.1em;
+  font-size: 1 em;
   padding: 15px;
   border: 1px solid #1a6b9a;
-  background-color: #3b4252;
   border-radius: 5px;
+  background-color: #3b4252;
 }
 
 #input {
@@ -48,7 +48,7 @@
 }
 
 #entry {
-  padding: 5px 15px;
+  padding: 5px 10p 5px 5px;
 }
 
 #entry:selected {
