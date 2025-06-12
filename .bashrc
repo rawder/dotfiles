@@ -83,7 +83,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -105,7 +104,7 @@ alias ssh='kitty +kitten ssh'
 alias vim='nvim'
 alias yay='yay --noconfirm $@ && yes | sudo pacman -Sccq'
 alias wshowkeys='wshowkeys -b#CCCCCC22 -F "monospace 48" -a bottom -a left -m 80'
-
+alias rm='trash'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
