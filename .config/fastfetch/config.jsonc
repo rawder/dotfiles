@@ -14,8 +14,9 @@
         "type": "raw",
         "source": "~/.config/fastfetch/logo.bin",
         "padding": {
+            "left": 4,
             "top": 3,
-            "right": 6
+            "right": 2
         }
     },
     "display": {
