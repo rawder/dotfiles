@@ -14,12 +14,12 @@ Some config files for my laptop computer running Hyprland with 1.2 screen scale
 2. Use Arch packages previously installed and saved to 'packages.txt' with
 
     ```bash
-    ~$ yay -S --needed --noconfirm - < packages.txt
+    ~$ /usr/bin/yay -S --needed --noconfirm - < packages.txt
     ```
 
    Btw, 'packages.txt' saved with
     ```bash
-     ~$ yay -Qe | awk '{print $1}' | sort >  packages.txt
+     ~$ /usr/bin/yay -Qe | awk '{print $1}' | sort >  packages.txt
     ```
 
     'amd-ucode',
