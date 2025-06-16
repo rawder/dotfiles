@@ -1,16 +1,11 @@
 {
-    //
-    // Style based on carlosdss22 configuration.
-    //
-    // See https://github.com/Alexays/Waybar/wiki/Examples for details
-    //
     "reload_style_on_change": true,
     // Waybar at top layer
     "layer": "top",
     // Waybar position (top|bottom|left|right)  
     "position": "top",
     // Waybar height and width (to be removed for auto height)
-    "height": 20,
+    //"height": 20,
     // "width": 1280, 
     // Order of the modules
     "modules-left": [
@@ -20,14 +15,14 @@
     "modules-center": [],
     "modules-right": [
     	"idle_inhibitor",
+	"hyprland/language",
         "tray",
 	"network",
 	"bluetooth",
-        "backlight",
 	"temperature",
+        "backlight",
+	"battery",
 	"pulseaudio",
-        "battery",
-	"hyprland/language",
         "clock"
     ],
 
@@ -69,33 +64,6 @@
         },
         "icon": true,
         "icon-size": 18
-    },
-    
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
     },
     
     "idle_inhibitor": {
@@ -179,22 +147,15 @@
         ],
     },
 
-    "backlight/slider": {
-        "min": 0,
-        "max": 100,
-        "orientation": "horizontal",
-        "device": "amdgpu_bl1"
-    },
-
     "battery": {
         "states": {
-            "good": 95,
+            "good": 80,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-plugged": "",
         "format-alt": "{time} {icon}",
         "format-good": "{capacity}% {icon}", 
         "format-full": "",
@@ -230,19 +191,8 @@
         "tooltip-format-enumerate-connected-battery": "{device_alias} ({device_address}): {device_battery_percentage}%",
     },
     
-    "wireplumber": {
-        "format": "{volume}% {icon}",
-        "format-muted": "   ",
-        "on-click": "pavucontrol",
-        "format-icons": [
-            "  ",
-            "  ",
-            "   "
-        ]
-    },
-    
     "pulseaudio": {
-        "format": "{volume}% {icon}  {format_source}",
+        "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": "  {icon} {format_source}",
         "format-muted": "   {format_source}",
@@ -262,17 +212,5 @@
             ]
         },
         "on-click": "pavucontrol"
-    },
-    
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" 
     }
 }

@@ -74,13 +74,10 @@ window#waybar.termite {
 #network,
 #bluetooth,
 #pulseaudio,
-#wireplumber,
-#custom-media,
 #tray,
 #mode,
 #idle_inhibitor,
-#language,
-#mpd {
+#language {
     padding: 3px 8px;
     margin: 2px 1px 2px 0;
     border-radius: 3px;
@@ -145,29 +142,13 @@ label:focus {
     background-color: lightgrey;
 }
 
-#pulseaudio,
-#wireplumber {
+#pulseaudio {
     background-color: #604f76;
 }
 
-#pulseaudio.muted,
-#wireplumber.muted {
+#pulseaudio.muted {
     background-color: #ebcb8b;
     color: #2a5c45;
-}
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
 }
 
 #temperature {
@@ -198,23 +179,6 @@ label:focus {
     margin-right: 10px;
     font-size: 13px;
     background-color: #14727D;
-}
-
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
 }
 
 #custom-power {
