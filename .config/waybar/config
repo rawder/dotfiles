@@ -91,7 +91,7 @@
                                 "on-scroll"     : 1,
                                 "on-click-right": "mode",
                                 "format": {
-                                                              "months":     "<span color='#ffead3'>{}</span>",
+                                                              "months":     "<span color='#ffead3'>{}</span>", 
                                                               "days":       "<span color='#d8dee9'>{}</span>",
                                                               "weeks":      "<span color='#99ffdd'>{}</span>",
                                                               "weekdays":   "<span color='#ffcc66'>{}</span>",
@@ -124,8 +124,8 @@
     
     "temperature": {
         "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
-	"warning-threshold": 45,
-        "critical-threshold": 55,
+	"warning-threshold": 50,
+        "critical-threshold": 60,
 	"format": "{temperatureC}°C {icon}",
         "format-warning": "{temperatureC}°C {icon}",
         "format-critical": "{temperatureC}°C {icon}",
@@ -195,7 +195,7 @@
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": "  {icon} {format_source}",
-        "format-muted": "   {format_source}",
+        "format-muted": "  {format_source}",
         "format-source": " {volume}% ",
         "format-source-muted": " ",
         "format-icons": {
