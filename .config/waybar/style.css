@@ -4,6 +4,8 @@
     font-family: Font Awesome;
     font-size: 12px;
     color: #d8dee9;
+    margin: 1px;
+    padding: 0;
 }
 
 @keyframes background-blink {
@@ -17,9 +19,10 @@
 }
 
 window#waybar {
-    margin: 5px;
-    margin-bottom: 3px;
-    background-color: rgba(43, 48, 59, 0.9);
+    margin: 5px 5px 0 5px;
+    outline: 2px solid #64727d;
+    border-radius: 3px;
+    background-color: rgba(43, 48, 59, 0.95);
     color: #e5e9f0;
     transition-property: background-color;
     transition-duration: .5s;
@@ -34,8 +37,7 @@ window#waybar.termite {
 }
 
 #workspaces {
-    margin: 0 10px 0 1px;
-    padding: 2px;
+    margin-right: 10px;
 }
 
 #workspaces button {
@@ -72,16 +74,18 @@ window#waybar.termite {
 #network,
 #bluetooth,
 #pulseaudio,
+#wireplumber,
 #tray,
 #mode,
 #idle_inhibitor,
 #language {
-    padding: 3px 8px;
     margin: 2px 1px 2px 0;
+    padding: 3px 8px;
     border-radius: 3px;
 }
 
 #clock {
+    margin-right: 2px;	
     background-color: #4c566a;
 }
 
@@ -119,6 +123,8 @@ label:focus {
 }
 
 #backlight {
+    margin-right: 0;
+    border-radius: 3px 0 0 3px; 
     background-color: #517175;
 }
 
@@ -140,12 +146,15 @@ label:focus {
     background-color: lightgrey;
 }
 
-#pulseaudio {
-    background-color: #604f76;
+#pulseaudio,
+#wireplumber {
+    padding-left: 3px;	
+    border-radius: 0 3px 3px 0;	
+    background-color: #517175;
 }
 
-#pulseaudio.muted {
-    background-color: #ebcb8b;
+#pulseaudio.muted,
+#wireplumber.muted {
     color: #2a5c45;
 }
 
