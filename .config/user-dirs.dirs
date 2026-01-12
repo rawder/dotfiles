@@ -8,7 +8,7 @@
 XDG_DESKTOP_DIR="$HOME/Рабочий стол"
 XDG_DOWNLOAD_DIR="$HOME/Загрузки"
 XDG_TEMPLATES_DIR="$HOME/Шаблоны"
-XDG_PUBLICSHARE_DIR="$HOME/Общедоступные"
+XDG_PUBLICSHARE_DIR="$HOME/Общие"
 XDG_DOCUMENTS_DIR="$HOME/Документы"
 XDG_MUSIC_DIR="$HOME/Музыка"
 XDG_PICTURES_DIR="$HOME/Изображения"

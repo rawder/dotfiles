@@ -4,6 +4,8 @@
     font-family: Font Awesome;
     font-size: 12px;
     color: #d8dee9;
+    margin: 1px;
+    padding: 0;
 }
 
 @keyframes background-blink {
@@ -17,9 +19,10 @@
 }
 
 window#waybar {
-    margin: 5px;
-    margin-bottom: 2px;
-    background-color: rgba(43, 48, 59, 0.9);
+    margin: 5px 5px 0 5px;
+    outline: 2px solid #64727d;
+    border-radius: 3px;
+    background-color: rgba(43, 48, 59, 0.95);
     color: #e5e9f0;
     transition-property: background-color;
     transition-duration: .5s;
@@ -34,8 +37,7 @@ window#waybar.termite {
 }
 
 #workspaces {
-    margin: 0 7px 0 2px;
-    padding: 2px;
+    margin-right: 10px;
 }
 
 #workspaces button {
@@ -46,15 +48,13 @@ window#waybar.termite {
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: #434c5e;
     box-shadow: inherit;
     outline: 2px solid #64727d;
-
 }
 
-#workspaces button.focused {
-    background-color: #5e81ac;
-    border-bottom: 2px solid #ffffff;
+#workspaces button.active {
+    box-shadow: 0px -1px 0px #81a1c1 inset;
 }
 
 #workspaces button.urgent {
@@ -75,18 +75,17 @@ window#waybar.termite {
 #bluetooth,
 #pulseaudio,
 #wireplumber,
-#custom-media,
 #tray,
 #mode,
 #idle_inhibitor,
-#language,
-#mpd {
-    padding: 3px 8px;
+#language {
     margin: 2px 1px 2px 0;
+    padding: 3px 8px;
     border-radius: 3px;
 }
 
 #clock {
+    margin-right: 2px;	
     background-color: #4c566a;
 }
 
@@ -124,6 +123,8 @@ label:focus {
 }
 
 #backlight {
+    margin-right: 0;
+    border-radius: 3px 0 0 3px; 
     background-color: #517175;
 }
 
@@ -147,31 +148,18 @@ label:focus {
 
 #pulseaudio,
 #wireplumber {
-    background-color: #604f76;
+    padding-left: 3px;	
+    border-radius: 0 3px 3px 0;	
+    background-color: #517175;
 }
 
 #pulseaudio.muted,
 #wireplumber.muted {
-    background-color: #ebcb8b;
     color: #2a5c45;
-}
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
 }
 
 #temperature {
-    background-color: #a3be8c;
+    background-color: #536253;
 }
 
 #temperature.warning {
@@ -198,23 +186,6 @@ label:focus {
     margin-right: 10px;
     font-size: 13px;
     background-color: #14727D;
-}
-
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
 }
 
 #custom-power {

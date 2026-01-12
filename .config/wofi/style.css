@@ -1,10 +1,7 @@
 /*@import "~/.cache/wal/colors.css";*/
 #window {
   font-family: 'Roboto', serif;
-  font-size: 1 em;
   padding: 15px;
-  border: 1px solid #1a6b9a;
-  border-radius: 5px;
   background-color: #3b4252;
 }
 
@@ -48,10 +45,11 @@
 }
 
 #entry {
-  padding: 5px 10p 5px 5px;
+  padding: 5px 10px;
 }
 
 #entry:selected {
+  padding: 5px 15px;
   border: 1px solid #311532;
   border-radius: 3px;
 }
