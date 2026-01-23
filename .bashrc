@@ -102,12 +102,14 @@ alias l='ls -CF'
 alias icat='kitty +kitten icat'
 alias ssh='kitty +kitten ssh'
 alias vim='nvim'
-alias yay='yay --noconfirm $@ && yes | sudo pacman -Sccq'
+alias update='yay --noconfirm $@ && yes | sudo pacman -Sccq'
 alias wshowkeys='wshowkeys -b#CCCCCC22 -F "monospace 48" -a bottom -a left -m 80'
-alias rm='trash'
+alias rm='trash --trash-dir ~/.local/share/Trash'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+# Sleep and lock 
+alias zzz='systemctl sleep'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
