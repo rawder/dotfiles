@@ -45,11 +45,12 @@
 }
 
 #entry {
-  padding: 5px 10px;
+  padding: 8px;
 }
 
 #entry:selected {
-  padding: 5px 15px;
+  padding: 8px 12px;
   border: 1px solid #311532;
   border-radius: 3px;
+  outline: none;
 }
