@@ -4,7 +4,7 @@
     font-family: Font Awesome;
     font-size: 12px;
     color: #d8dee9;
-    margin: 1px;
+    margin: 0;
     padding: 0;
 }
 
@@ -19,7 +19,8 @@
 }
 
 window#waybar {
-    margin: 5px 5px 0 5px;
+    margin: 5px;
+    padding: 10px;
     outline: 2px solid #64727d;
     border-radius: 3px;
     background-color: rgba(43, 48, 59, 0.95);
@@ -41,8 +42,8 @@ window#waybar.termite {
 }
 
 #workspaces button {
-    margin-right: 1px;
-    padding: 0 7px;
+    margin: 2px 1px 2px 0;
+    padding: 1px 8px;
     background-color: #4c566a;
     border-radius: 3px;
 }
@@ -80,12 +81,12 @@ window#waybar.termite {
 #idle_inhibitor,
 #language {
     margin: 2px 1px 2px 0;
-    padding: 3px 8px;
+    padding: 1px 8px;
     border-radius: 3px;
 }
 
 #clock {
-    margin-right: 2px;	
+    margin-right: 2px;
     background-color: #4c566a;
 }
 
@@ -124,7 +125,7 @@ label:focus {
 
 #backlight {
     margin-right: 0;
-    border-radius: 3px 0 0 3px; 
+    border-radius: 3px 0 0 3px;
     background-color: #517175;
 }
 
@@ -148,8 +149,8 @@ label:focus {
 
 #pulseaudio,
 #wireplumber {
-    padding-left: 3px;	
-    border-radius: 0 3px 3px 0;	
+    padding-left: 3px;
+    border-radius: 0 3px 3px 0;
     background-color: #517175;
 }
 
@@ -200,8 +201,7 @@ label:focus {
 tooltip {
     border: 1px solid rgba(100, 114, 125, 0.7);
     border-radius: 5px;
-    background-color: #2e3440;
-    opacity: 0.95;
+    background-color: rgba(46, 52, 64, 0.95);
 }
 
 tooltip label {

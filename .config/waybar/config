@@ -1,12 +1,13 @@
 {
-    "reload_style_on_change": true,
     // Waybar at top layer
     "layer": "top",
     // Waybar position (top|bottom|left|right)  
     "position": "top",
     // Waybar height and width (to be removed for auto height)
     //"height": 20,
-    // "width": 1280, 
+    // "width": 1280,
+    "reload_style_on_change": false,
+    "margin": "0",
     // Order of the modules
     "modules-left": [
         "hyprland/workspaces",
