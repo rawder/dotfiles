@@ -102,7 +102,7 @@ alias l='ls -CF'
 alias icat='kitty +kitten icat'
 alias ssh='kitty +kitten ssh'
 alias vim='nvim'
-alias update='yay --noconfirm $@ && yes | sudo pacman -Sccq'
+alias update='yay --noconfirm $@ && sudo rm --dir /var/cache/pacman/pkg/download-* && yes | sudo pacman -Sccq'
 alias wshowkeys='wshowkeys -b#CCCCCC22 -F "monospace 48" -a bottom -a left -m 80'
 alias rm='trash --trash-dir ~/.local/share/Trash'
 # Add an "alert" alias for long running commands.  Use like so:
