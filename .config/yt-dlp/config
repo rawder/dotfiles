@@ -1,0 +1,8 @@
+--format bv[ext=webm][height=1080]+ba[ext=webm]
+--merge-output-format mkv
+--embed-thumbnail
+--embed-metadata
+--write-subs
+--sub-lang en,ru
+--output %(title)s.%(ext)s
+
