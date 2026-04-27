@@ -6,5 +6,5 @@ while true; do
 		notify-send --icon="/usr/share/icons/Papirus/32x32/apps/system-software-update.svg" \
 			"Arch Linux Updates" "$updates packages available for update"
 	fi
-	sleep 1h
+	sleep 6h
 done
