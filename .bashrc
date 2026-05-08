@@ -102,6 +102,7 @@ alias l='ls -CF'
 alias icat='kitty +kitten icat'
 alias ssh='kitty +kitten ssh'
 alias vim='nvim'
+alias youtube='yt-dlp -f "bv[vcodec=vp9]+ba[acodec=opus]"'
 alias update='yay --noconfirm $@ && \
                   sudo rm --dir /var/cache/pacman/pkg/download-* && \
                   yes | yay -Scc && yes| sudo pacman -Sccq'
