@@ -11,7 +11,7 @@
     // Order of the modules
     "modules-left": [
         "hyprland/workspaces",
-	"hyprland/window",
+	    "hyprland/window"
     ],
     "modules-center": [],
     "modules-right": [
@@ -49,8 +49,8 @@
 
     "hyprland/language": {
         "format": "{}",
-        "format-en": "En",
-        "format-ru": "Ru",
+        "format-en": "Eng",
+        "format-ru": "Rus",
 	"cursor": "false",
 	"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
     },
