@@ -14,7 +14,7 @@ for svg_file in *.svg; do
         # Create PNG file name 
         filename=$(basename -- "$svg_file")
         name="${filename%.*}"
-        png_file="$name.png"
+        png_file="../$name.png"
 
         # Run Inkscape to convert images
         inkscape -w 512 -h 512 "$svg_file" -o "$png_file"
