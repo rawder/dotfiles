@@ -1,4 +1,0 @@
-#!/bin/bash
-#
-
-XDG_CURRENT_DESKTOP=Hyprland /usr/bin/start-hyprland 2>&1 > /tmp/.Hyprland.log
