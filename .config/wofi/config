@@ -11,4 +11,4 @@ prompt=Type to filter
 no_actions=true
 normal_window=true
 layer=overlay
-
+close_on_focus_loss=true
