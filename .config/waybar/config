@@ -15,16 +15,16 @@
     ],
     "modules-center": [],
     "modules-right": [
-    	"idle_inhibitor",
-	"hyprland/language",
-        "tray",
+    "idle_inhibitor",
+    "tray",
 	"network",
 	"bluetooth",
 	"temperature",
 	"battery",
 	"backlight",
 	"wireplumber",
-        "clock"
+    "hyprland/language",
+    "clock"
     ],
 
     // Modules configuration
@@ -143,11 +143,11 @@
     
     "backlight": {
         "device": "amdgpu_bl0",
-	"tooltip": false,
-        "format": "{percent}% {icon}",
+        "format": "{icon} ",
+        "tooltip-format": "Brightness: {percent}%",
         "format-icons": [
             "",
-	    "",
+            "",
         ],
     },
 
@@ -157,7 +157,7 @@
             "warning": 30,
             "critical": 15
         },
-	"cursor": "false",
+        "cursor": "false",
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "",
@@ -183,7 +183,7 @@
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
-	"cursor": "false",
+        "cursor": "false",
         "tooltip-format-wifi": "{essid}: {signalStrength}%",
         "tooltip-format-ethernet": "{ifname}: {bandwidthTotalBytes}"
     },
@@ -221,13 +221,14 @@
     },
 
 "wireplumber": {
-    "format": "{volume}% {icon} {format_source}",
+    "format": "{icon}  {format_source}",
     "format-muted": " ",
-    "format-source": " {volume}% ",
+    "format-source": "",
     "format-source-muted": " ",
     "on-click": "pwvucontrol",
     "format-icons": ["", "", " "],
     "cursor": "false",
+    "tooltip-format": "Volume: {volume}%"
 },
 
 "wireplumber#source": {
