@@ -1,6 +1,8 @@
 {
     "Name": "Default",
-    "Theme": "AAAAAQAAAAAAAAAA/////wAAAAAZAAAABQAAAAAB//////////8AAAAAAAEAAAAAAf//f39/f39/AAAAAAAFAAAAAQH//zU1NTU1NQAAAAAABQAAAAIB//9aWlpaWloAAAAAAAUAAAADAf//S0tLS0tLAAAAAAAFAAAABAH//yMjIyMjIwAAAAAABQAAAAUB//8tLS0tLS0AAAAAAAUAAAAGAf//////////AAAAAAABAAAABgH//39/f39/fwAAAAAABQAAAAcB/////wAAAAAAAAAAAAUAAAAIAf//////////AAAAAAABAAAACAH//39/f39/fwAAAAAABQAAAAkB//87O0JCUlIAAAAAAAUAAAAKAf//Q0NMTF5eAAAAAAAFAAAACwH//xQUFBQUFAAAAAAABQAAAAwB//8aGlVVkZEAAAAAAAEAAAAMAf//UFBQUFBQAAAAAAAFAAAADQH//////////wAAAAAAAQAAAA0B//9/f39/f38AAAAAAAUAAAAOAf//KiqCgtraAAAAAAAFAAAADwH//4KCKira2gAAAAAABQAAABABeHguLjU1PT0AAAAAAAUAAAASAf//////////AAAAAAAFAAAAEwH//zU1NTU1NQAAAAAABQAAABQB//9/f39/f38AAAAAAAA=",
+    "Options": {
+        "ApplyWindowSize": true
+    },
     "Version": 1,
     "Widgets": [
         {
@@ -13,6 +15,10 @@
                             "Widgets": [
                                 {
                                     "PlayerControls": {
+                                        "ShowNext": true,
+                                        "ShowPlayPause": true,
+                                        "ShowPrevious": true,
+                                        "ShowStop": true
                                     }
                                 },
                                 {
@@ -37,17 +43,20 @@
                                 {
                                     "VUMeter": {
                                         "BackgroundColour": "#00030303",
+                                        "BarGradientColours": [
+                                            "#ff434c5e",
+                                            "#ff6ad6fe"
+                                        ],
                                         "BarSections": 1,
                                         "BarSize": 8,
                                         "BarSpacing": 2,
                                         "ChannelSpacing": 5,
                                         "FalloffTime": 30,
-                                        "Gradient1Colour": "#ff434c5e",
-                                        "Gradient2Colour": "#ff6ad6fe",
                                         "LegendColour": "#ff000e18",
                                         "Orientation": 1,
                                         "PeakColour": "#ffffffff",
-                                        "PeakHoldTime": 1,
+                                        "PeakFalloffTime": 13,
+                                        "PeakHoldTimeMs": 1000,
                                         "SectionSpacing": 2,
                                         "ShowLegend": false,
                                         "ShowPeaks": true,
@@ -224,6 +233,7 @@
                                         "LineFont": "",
                                         "LineSpacing": 5,
                                         "NoLyricsScript": "[Артист: %artist%$crlf(2)][Альбом: %album%$crlf(2)]Название: %title%",
+                                        "ProgressFill": 0,
                                         "RightMargin": 20,
                                         "ScrollDuration": 500,
                                         "ScrollMode": 1,
@@ -242,7 +252,7 @@
                                         "ShowHeader": false,
                                         "ShowHorizontalScrollbar": false,
                                         "ShowVerticalScrollbar": true,
-                                        "State": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAACAAAAAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAhAAAAAEAAAAAAAAAsAAAAAEAAAACAAAD6AAAAACbAAAAAAAAAAAAAAAAAAAAAQ=="
+                                        "State": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbkAAAACAAAAAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAhAAAAAEAAAAAAAABNQAAAAEAAAACAAAD6AAAAAE1AAAAAAAAAAAAAAAAAAAAAQ=="
                                     }
                                 }
                             ]
@@ -255,5 +265,9 @@
                 ]
             }
         }
-    ]
+    ],
+    "WindowSize": {
+        "Height": 804,
+        "Width": 1475
+    }
 }
