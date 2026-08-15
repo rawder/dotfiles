@@ -18,6 +18,7 @@
                                         "ShowNext": true,
                                         "ShowPlayPause": true,
                                         "ShowPrevious": true,
+                                        "ShowRandomTrack": false,
                                         "ShowStop": true
                                     }
                                 },
@@ -88,6 +89,7 @@
                                         "Columns": "0",
                                         "Display": 0,
                                         "DoubleClickAction": 1,
+                                        "FilterSource": 0,
                                         "Group": "Default",
                                         "ID": "955f29805de446d7a9b6195a94bfd817",
                                         "IconHeight": 100,
@@ -117,6 +119,7 @@
                                         "Columns": "1",
                                         "Display": 0,
                                         "DoubleClickAction": 1,
+                                        "FilterSource": 0,
                                         "Group": "Default",
                                         "ID": "4fee1a754b3e47ff86f4c711fbf0f0eb",
                                         "IconHeight": 100,
@@ -146,6 +149,7 @@
                                         "Columns": "2",
                                         "Display": 0,
                                         "DoubleClickAction": 1,
+                                        "FilterSource": 0,
                                         "Group": "Default",
                                         "ID": "3b20c1db282d4bfe9a95c776e6723608",
                                         "IconHeight": 100,
@@ -175,6 +179,7 @@
                                         "Columns": "3",
                                         "Display": 0,
                                         "DoubleClickAction": 1,
+                                        "FilterSource": 0,
                                         "Group": "Default",
                                         "ID": "34777508a4ae4ec5939620f235e8ec1a",
                                         "IconHeight": 100,
@@ -252,7 +257,7 @@
                                         "ShowHeader": false,
                                         "ShowHorizontalScrollbar": false,
                                         "ShowVerticalScrollbar": true,
-                                        "State": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbkAAAACAAAAAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAhAAAAAEAAAAAAAABNQAAAAEAAAACAAAD6AAAAAE1AAAAAAAAAAAAAAAAAAAAAQ=="
+                                        "State": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAACAAAAAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAhAAAAAEAAAAAAAAAsAAAAAEAAAACAAAD6AAAAABIAAAAAAAAAAAAAAAAAAAAAQ=="
                                     }
                                 }
                             ]
