@@ -1,0 +1,15 @@
+{
+    "control":[
+        { "VTOY_MENU_TIMEOUT": "5" },
+        { "VTOY_MENU_LANGUAGE": "ru_RU" },
+        { "VTOY_DEFAULT_IMAGE": "F4>Search and boot Windows" }
+    ],
+    "persistence":[
+        {
+            "image": "/ISO/ubuntu-24.04.4-desktop-amd64.iso",
+            "backend":[
+                "/ISO/casper-rw.dat"
+            ]
+        }
+    ]
+}

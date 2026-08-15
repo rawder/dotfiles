@@ -6,45 +6,38 @@
 
 window {
     background-color: rgba(0, 0, 0, 0.7);
-    font-size: 16px;
+    font-size: 13px;
 }
 
 button {
-    margin: 10px 0;
-    padding: 10px;
+    margin: 30px 0;
+    padding: 0;
     background-color: #2e3440;
     border-style: none;
-    border-width: 1px;
+    border-width: 0;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 30%;
+    background-size: 40%;
     color: #5e81ac;
     border-radius: 0px;
-    outline-style: none;
-}
-
-button:focus,
-button:active,
-button:hover {
- /* background-color: #4c566a;
-    color: #81a1c1; */
     outline-style: none;
 }
 
 button:hover {
     color: rgba(0, 0, 0, 0);
     background-color: #517175;
-    background-size: 37%;
+    background-size: 50%;
     border-radius: 10px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
 }
 
-#lock {
-    background-image: image(url("/home/andrew/.config/wlogout/assets/lock.png"), url("/home/andrew/.config/wlogout/assets/lock.png"));
+#shutdown {
+    margin-left: 200px;
+    background-image: image(url("/home/andrew/.config/wlogout/assets/shutdown.png"), url("/home/andrew/.config/wlogout/assets/shutdown.png"));
     border-radius: 10px 0px 0px 10px;
 }
-#lock:hover {
+#shutdown:hover {
     border-radius: 10px;
 }
 
@@ -52,24 +45,25 @@ button:hover {
     background-image: image(url("/home/andrew/.config/wlogout/assets/logout.png"), url("/home/andrew/.config/wlogout/assets/logout.png"));
 }
 
-#suspend {
-    background-image: image(url("/home/andrew/.config/wlogout/assets/suspend.png"), url("/home/andrew/.config/wlogout/assets/suspend.png"));
+#reboot {
+    background-image: image(url("/home/andrew/.config/wlogout/assets/reboot.png"), url("/home/andrew/.config/wlogout/assets/reboot.png"));
 }
 
 #hibernate {
-    background-image: image(url("/home/andrew/.config/wlogout/assets/hibernate.png"), url("/home/andrew/.config/wlogout/assets/hibernate.png"));
+    background-image: image(url("/home/andrew/.config/wlogout/assets/hibernate.png"), url("/home/andrew/.config/wlogout/assets/hibernaite.png"));
 }
 
-#shutdown {
-    background-image: image(url("/home/andrew/.config/wlogout/assets/shutdown.png"), url("/home/andrew/.config/wlogout/assets/shutdown.png"));
+#lock {
+    background-image: image(url("/home/andrew/.config/wlogout/assets/lock.png"), url("/home/andrew/.config/wlogout/assets/lock.png"));
 }
 
-#reboot {
-    background-image: image(url("/home/andrew/.config/wlogout/assets/reboot.png"), url("/home/andrew/.config/wlogout/assets/reboot.png"));
+#suspend {
+    margin-right: 200px;
+    background-image: image(url("/home/andrew/.config/wlogout/assets/suspend.png"), url("/home/andrew/.config/wlogout/assets/suspend.png"));
     border-radius: 0px 10px 10px 0px;
 }
 
-#reboot:hover {
+#suspend:hover {
     border-radius: 10px;
 }
 
