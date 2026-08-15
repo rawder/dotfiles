@@ -10,22 +10,16 @@ window {
 }
 
 button {
-    margin:30px 0;
+    margin: 30px 0;
     padding: 0;
     background-color: #2e3440;
     border-style: none;
     border-width: 0;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 35%;
+    background-size: 40%;
     color: #5e81ac;
     border-radius: 0px;
-    outline-style: none;
-}
-
-button:focus,
-button:active,
-button:hover {
     outline-style: none;
 }
 
@@ -38,12 +32,12 @@ button:hover {
     transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
 }
 
-#lock {
+#shutdown {
     margin-left: 200px;
-    background-image: image(url("/home/andrew/.config/wlogout/assets/lock.png"), url("/home/andrew/.config/wlogout/assets/lock.png"));
+    background-image: image(url("/home/andrew/.config/wlogout/assets/shutdown.png"), url("/home/andrew/.config/wlogout/assets/shutdown.png"));
     border-radius: 10px 0px 0px 10px;
 }
-#lock:hover {
+#shutdown:hover {
     border-radius: 10px;
 }
 
@@ -51,25 +45,25 @@ button:hover {
     background-image: image(url("/home/andrew/.config/wlogout/assets/logout.png"), url("/home/andrew/.config/wlogout/assets/logout.png"));
 }
 
-#suspend {
-    background-image: image(url("/home/andrew/.config/wlogout/assets/suspend.png"), url("/home/andrew/.config/wlogout/assets/suspend.png"));
+#reboot {
+    background-image: image(url("/home/andrew/.config/wlogout/assets/reboot.png"), url("/home/andrew/.config/wlogout/assets/reboot.png"));
 }
 
 #hibernate {
-    background-image: image(url("/home/andrew/.config/wlogout/assets/hibernate.png"), url("/home/andrew/.config/wlogout/assets/hibernate.png"));
+    background-image: image(url("/home/andrew/.config/wlogout/assets/hibernate.png"), url("/home/andrew/.config/wlogout/assets/hibernaite.png"));
 }
 
-#shutdown {
-    background-image: image(url("/home/andrew/.config/wlogout/assets/shutdown.png"), url("/home/andrew/.config/wlogout/assets/shutdown.png"));
+#lock {
+    background-image: image(url("/home/andrew/.config/wlogout/assets/lock.png"), url("/home/andrew/.config/wlogout/assets/lock.png"));
 }
 
-#reboot {
+#suspend {
     margin-right: 200px;
-    background-image: image(url("/home/andrew/.config/wlogout/assets/reboot.png"), url("/home/andrew/.config/wlogout/assets/reboot.png"));
+    background-image: image(url("/home/andrew/.config/wlogout/assets/suspend.png"), url("/home/andrew/.config/wlogout/assets/suspend.png"));
     border-radius: 0px 10px 10px 0px;
 }
 
-#reboot:hover {
+#suspend:hover {
     border-radius: 10px;
 }
 
