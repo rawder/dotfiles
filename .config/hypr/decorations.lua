@@ -26,7 +26,7 @@ hl.config({
 
     dwindle = {
         force_split                  = 0,
-        preserve_split               = false,
+        preserve_split               = true,
         smart_split                  = false,
         smart_resizing               = true,
         permanent_direction_override = false,
@@ -96,9 +96,9 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 -- "Smart gaps" / "No gaps when only"
-hl.workspace_rule({ workspace = "w[tv1]s[false]", gaps_out = 0, gaps_in = 0 })
-hl.workspace_rule({ workspace = "f[1]s[false]", gaps_out = 0, gaps_in = 0 })
-hl.window_rule({ match = { float = false, workspace = "w[tv1]s[false]" }, border_size = 0 })
-hl.window_rule({ match = { float = false, workspace = "w[tv1]s[false]" }, rounding = 0 })
-hl.window_rule({ match = { float = false, workspace = "f[1]s[false]" }, border_size = 0 })
-hl.window_rule({ match = { float = false, workspace = "f[1]s[false]" }, rounding = 0 })
+hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
+hl.workspace_rule({ workspace = "f[1]", gaps_out = 0, gaps_in = 0 })
+hl.window_rule({ match = { float = false, workspace = "w[tv1]" }, border_size = 0 })
+hl.window_rule({ match = { float = false, workspace = "w[tv1]" }, rounding = 0 })
+hl.window_rule({ match = { float = false, workspace = "f[1]" }, border_size = 0 })
+hl.window_rule({ match = { float = false, workspace = "f[1]" }, rounding = 0 })
