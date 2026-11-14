@@ -5,7 +5,7 @@ menu        = "wofi --show drun"
 --Some defaults
 Cursors = "VolantesLightCursors"
 Cursor_size = "32"
-Icons = "Slot-Nord-Dark-Icons"
+Icons = "Papirus-Mace-Dark"
 --local Theme = "Nordic-darker-standard-buttons-v40"
 Theme = "Nordic-darker"
 Font = "Inter Display 9"
