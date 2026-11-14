@@ -45,14 +45,15 @@
             },
         "on-click": "activate",    
         "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1"
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "tooltip": false
     },
 
     "hyprland/language": {
         "format": "{}",
         "format-en": "Eng",
         "format-ru": "Rus",
-	    "cursor": "false",
+	    "cursor": false,
 	    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
     },
 
@@ -75,7 +76,7 @@
             "activated": ""
             //"deactivated": ""
         },
-	    "cursor": "false"
+	    "cursor": false
     },
 
     "tray": {
@@ -85,7 +86,7 @@
 
     "clock": {
         "locale": "ru_RU.UTF-8",
-	    "cursor": "false",
+	    "cursor": false,
 	    "format": "{:%H:%M}",
             "format-alt": "{:L%a, %d %B %R}",
             "tooltip-format": "<tt>{calendar}</tt>",
@@ -129,13 +130,13 @@
     
     "temperature": {
         "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
-	"warning-threshold": 50,
+	    "warning-threshold": 50,
         "critical-threshold": 65,
-	"format": "{temperatureC}°C {icon}",
+	    "format": "{temperatureC}°C {icon}",
         "format-warning": "{temperatureC}°C {icon}",
         "format-critical": "{temperatureC}°C {icon}",
         "tooltip": false,
-	"format-icons": [
+	    "format-icons": [
             "",
             "",
             ""
@@ -154,12 +155,14 @@
     },
 
     "battery": {
+        //"full-at": 60,
+        //"full-at-plugged": true,
         "states": {
             "good": 80,
             "warning": 30,
             "critical": 15
         },
-        "cursor": "false",
+        "cursor": false,
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "",
@@ -181,7 +184,7 @@
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "cursor": "false",
+        "cursor": false,
         "tooltip-format-wifi": "{essid}: {signalStrength}%",
         "tooltip-format-ethernet": "{ifname}: {bandwidthTotalBytes}"
     },
@@ -225,7 +228,7 @@
         "format-source-muted": " ",
         "on-click": "pwvucontrol",
         "format-icons": ["", "", " "],
-        "cursor": "false",
+        "cursor": false,
         "tooltip-format": "Volume: {volume}%"
     },
 
