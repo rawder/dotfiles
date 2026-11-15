@@ -26,3 +26,5 @@ hl.env("LIBVA_DRIVER_NAME", "radeonsi")
 hl.env("GTK_THEME", Theme)
 hl.env("GTK_ICON_THEME", Icons)
 hl.env("GOPATH", "~/.local/go/")
+--Some apps need this
+hl.env("DISABLE_TELEMETRY", "1")
